@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Search Engine</title>
+    <style>
+      /* Add some basic styling to the search box and button */
+      input[type="text"] {
+        margin: auto;
+        width:60% ;
+        border: 2px solid hwb(203 37% 3%);
+        align-items: center;
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+      button[type="submit"] {
+        padding: 10px 20px;
+        border: none;
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="Search..." name="search">
+      <button type="submit">Search</button>
+    </form>
+
+    <script>
+      // Get the search box and the search button
+      const searchBox = document.querySelector('input[name="search"]');
+      const searchButton = document.querySelector('button[type="submit"]');
+
+      // Add a click event listener to the search button
+      searchButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        const searchQuery = searchBox.value.toLowerCase(); // Get the search query in lowercase
+
+        // Get all the text content in the page
+        const pageText = document.body.textContent.toLowerCase();
+
+        // Check if the search query is in the page text
+        if (pageText.includes(searchQuery)) {
+          alert('Search query found!');
+        } else {
+          alert('Search query not found!');
+        }
+      });
+    </script>
+  </body>
+</html>

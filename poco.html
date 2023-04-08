@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+      .container {
+        position: absolute;
+        height: 500px;
+        width: 400px;
+        border: black 5px solid;
+        top: 15%;
+        left:30%;
+        padding: 10px;
+        transform: translateY(-50%,-50%);
+
+      }
+      .input-group {
+        float: left; ;
+        background-color: #55cc66;
+        margin-top: 50px;
+        padding: 5px;
+      }
+      .container h1{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <script>
+    function Addition(){
+        document.getElementById("demo").innerHTML="Done";
+        result++;
+            if(result>10){
+                alert("is not dividebale");
+                return ;
+            }
+			document.getElementById("result").value = result;
+    }
+  </script>
+  <body>
+    <p id="demo"></p>
+    <div class="container">
+        <h1 >Calculator</h1>
+        <textarea id="result" style="width: 397px; height: 51px;"></textarea>
+       <br>
+        <div class="input-group">
+            <button id="plus">+</button>
+          </div>
+          <br>
+          <div class="input-group">
+            <button id="minus">−</button>
+          </div>
+          <br>
+          <div class="input-group">
+            <button id="divide">÷</div>
+          <br>
+          <div class="input-group">
+             <button id="multiply">×</button>
+          </div>
+
+        </div>
+    </div>
+  
+  </body>
+</html>

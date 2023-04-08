@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Up Down Buttons</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+            position: absolute;
+             top: 50%;
+             left: 50%;
+            transform: translate(-50%, -50%);
+		}
+		button {
+			margin: 0 10px;
+			padding: 5px 10px;
+			font-size: 16px;
+		}
+		textarea {
+			width: 100px;
+			height: 100px;
+			padding: 5px;
+			font-size: 16px;
+            text-align: center;
+            line-height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button id="up">Up</button>
+		<textarea id="result"></textarea>
+		<button id="down">Down</button>
+	</div>
+	<script>
+		// JavaScript code for button functionality
+		let result = 0;
+        document.getElementById("result").value=result;
+		document.getElementById("up").addEventListener("click", () => {
+			result++;
+            if(result>10){
+                alert("Too much water is harmful");
+                return ;
+            }
+			document.getElementById("result").value = result;
+		});
+		document.getElementById("down").addEventListener("click", () => {
+            result--;
+            if(result<0){ 
+            alert("Water Count cannot be in negative");
+            return ;
+
+            }
+			
+			document.getElementById("result").value = result;
+		});
+	</script>
+</body>
+</html>

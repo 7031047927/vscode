@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Count Step</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            border: 1px solid black;
+          }
+          
+          button {
+            font-size: 16px;
+            padding: 8px 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+          }
+          
+          #output {
+            padding: 16px;
+            border: 1px solid gray;
+          }
+          
+    </style>
+  </head>
+  <script>
+    const upBtn = document.getElementById('upBtn');
+    const downBtn = document.getElementById('downBtn');
+    const output = document.getElementById('output');
+    
+    let counter = 0;
+    
+    upBtn.addEventListener('click', () => {
+      counter++;
+      output.textContent = counter;
+    });
+    
+    downBtn.addEventListener('click', () => {
+      counter--;
+      output.textContent = counter;
+    });
+    
+  </script>
+  <body>
+    <div class="container">
+        <input type="number" id="upBtn">Up</button>
+        <div type="number" id="output"></div>
+        <input type="number" id="downBtn">Down</button>
+      </div>
+  </body>
+</html>
